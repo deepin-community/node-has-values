@@ -1,0 +1,27 @@
+Source: node-has-values
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13)
+ , mocha <!nocheck>
+ , node-kind-of <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-has-values
+Vcs-Git: https://salsa.debian.org/js-team/node-has-values.git
+Homepage: https://github.com/jonschlinkert/has-values
+Rules-Requires-Root: no
+
+Package: node-has-values
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , node-kind-of
+Description: node library that returns true if any values exist
+ Returns true if any values exist, false if empty.
+ Works for booleans, functions, numbers, strings, nulls, objects and arrays.
+ .
+ Node.js is an event-based server-side JavaScript engine.
